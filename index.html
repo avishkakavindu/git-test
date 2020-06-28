@@ -9,13 +9,13 @@
    
 
    <!-- Bootstrap CSS -->
-   
+   <!-- build:css css/main.css -->
    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
      <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
      <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">    
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/styles.css">
-
+    <!-- endbuild -->
 
     <title>Ristorante Con Fusion</title>
 
@@ -39,7 +39,7 @@
                         <li class="nav-item"> <a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg fa-fw"> </span>Contact</a></li>
                     </ul>
                     <span class="navbar-text">
-                        <a data-toggle="modal" data-target="#loginModal">
+                        <a id="loginBtn" role="button">
                             <button type="button" class="btn btn-outline-warning">
                                 <span class="fa fa-sign-in fa-fw"></span>Login
                             </button>
@@ -99,7 +99,7 @@
                     <img src="./img/logo.png" class="img-fluid">
                 </div>
                 <div class="col-12 col-sm align-self-center">
-                    <a data-toggle="modal" data-target="#reservationModal" class="btn btn-warning btn-sm btn-block font-weight-bold">
+                    <a id="reserveBtn" class="btn btn-warning btn-sm btn-block font-weight-bold">
                         Reserve Table                        
                     </a>
                 </div>
@@ -323,26 +323,12 @@
     </footer>
 
  <!-- jQuery first, then Popper.js, then Bootstrap JS. -->
+ <!-- build:js js/main.js -->
  <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
  <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
  <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>  
 
- <script>
-     $(document).ready(function() {
-         $('#mycarousel').carousel({interval: 2000});
-         $('#carouselButton').click(function() {
-             if($('#carouselButton').children('i').hasClass('fa-pause')){
-                $('#mycarousel').carousel('pause');   
-                $('#carouselButton').children('i').removeClass('fa-pause');
-                $('#carouselButton').children('i').addClass('fa-play');
-             }else{
-                $('#mycarousel').carousel('cycle');
-                $('#carouselButton').children('i').removeClass('fa-play');
-                $('#carouselButton').children('i').addClass('fa-pause');
-             }
-         });
-     });
- </script>    
- 
+ <script src="js/scripts.js"></script>    
+ <!-- endbuild -->
 </body>
 </html>
